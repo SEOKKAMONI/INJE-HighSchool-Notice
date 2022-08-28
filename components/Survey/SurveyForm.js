@@ -16,8 +16,6 @@ function SurveyForm() {
     const onClick = (e) => {
         e.preventDefault();
         console.log(grade, Class);
-
-        return [grade, Class];
     }
 
 
@@ -34,7 +32,7 @@ function SurveyForm() {
                         <span className="form_text item">반</span>
                     </div>
                 </div>
-                <button className="survey_button" onClick={() => onClick}>입력하기</button>
+                <button className="survey_button" onClick={e => onClick(e)}>입력하기</button>
             </form>
         </div>
     )
