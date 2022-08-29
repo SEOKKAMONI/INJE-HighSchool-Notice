@@ -7,6 +7,11 @@ function ScheduleTable() {
     const [subjects, setSubjects] = useState([]);
     const [loading, setLoading] = useState(false);
 
+    let ScheduleList = "";
+    let HTML_CODE = "";
+    let printNum = 6;
+    
+
     const getSchedule = async () => {
         const json = await (
             await fetch(
