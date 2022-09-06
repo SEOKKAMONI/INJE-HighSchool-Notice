@@ -6,6 +6,7 @@ import Lunch from "../components/Main/Lunch";
 import Notice from "../components/Main/Notice";
 
 
+
 function Main() {
     return (
         <View style={styles.main}>

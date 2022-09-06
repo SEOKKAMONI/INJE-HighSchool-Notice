@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
-import SurveyInput from "./SurveyInput";
+import React from "react";
 import "./Survey.css";
-function SurveyForm() {
+import SurveyInput from "./SurveyInput";
+
+export function ConveyData(grade, Class) {
+    console.log(grade, Class)
+}
+
+export default function SurveyForm() {
     const [grade, setGrade] = useState("1");
-    const [Class, setClass] = useState("1");
+    const [Class, setClass] = useState("1");    
 
     useEffect(() => {
         console.log(grade);
@@ -13,11 +19,10 @@ function SurveyForm() {
         console.log(Class);
     }, [Class]); 
 
-    const onClick = (e) => {
+    function onClick(e) {
         e.preventDefault();
-        console.log(grade, Class);
+        ConveyData(grade, Class);
     }
-
 
     return (
         <div>
@@ -36,6 +41,5 @@ function SurveyForm() {
             </form>
         </div>
     )
-}
 
-export default SurveyForm;
+}

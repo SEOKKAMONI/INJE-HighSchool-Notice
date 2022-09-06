@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "./ScheduleTable.css"
 
-
 function ScheduleTable() {
     const [subjects, setSubjects] = useState([]);
     const [loading, setLoading] = useState(false);
