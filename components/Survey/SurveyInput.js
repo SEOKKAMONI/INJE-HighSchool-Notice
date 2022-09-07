@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 
 function SurveyInput() {
-    const [survey, setSurvey] = useState(false);
+    const { survey } = useContext(SurveyContext);
+
     return <App checkSurvey = {survey} />;
 }
 

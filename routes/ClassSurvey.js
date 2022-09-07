@@ -8,13 +8,12 @@ import { SurveyContext } from "../context/SurveyContext";
 function ClassSurvey() {
     const [grade, setGrade] = useState(1);
     const [Class, setClass] = useState(1);
+    const [survey, setSurvey] = useState(false);
 
     return (
         <View className="container" style={styles.container}>
-            <SurveyContext.Provider value={{grade,setGrade, Class,setClass}}>
-                <SurveyForm 
-                    style={styles.SurveyForm} 
-                />
+            <SurveyContext.Provider value={{grade,setGrade, Class,setClass, survey, setSurvey}}>
+                <SurveyForm style={styles.SurveyForm} />
             </SurveyContext.Provider>
         </View>
     )
