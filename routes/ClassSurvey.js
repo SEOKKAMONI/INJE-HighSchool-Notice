@@ -1,6 +1,8 @@
-import SurveyForm from "../components/Survey/SurveyForm";
 import { StyleSheet, Text, View } from 'react-native';
 import { useState } from "react";
+
+import SurveyForm from "../components/Survey/SurveyForm";
+import SurveyInput from "../components/Survey/SurveyInput";
 
 function ClassSurvey() {
     const [grade, setGrade] = useState(1);

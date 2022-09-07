@@ -5,19 +5,15 @@ import Header from "./routes/Header";
 import Main from "./routes/Main";
 import ClassSurvey from './routes/ClassSurvey';
 
-export default function App( {Survey} ) {
-
-  const [injeClass, setInjeClass] = useState("1");
-  const [injeGrade, setInjeGrade] = useState("1");
-
-  if (!Survey) {
+export default function App( {checkSurvey} ) {
+  if (!checkSurvey) {
     return (
       <View style={styles.container}>
         <ClassSurvey />
       </View>
     )
   }
-  else if (Survey) {
+  else if (checkSurvey) {
     return (
       <View style={styles.container}>
         <Header />

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 function SurveyInput() {
     const [survey, setSurvey] = useState(false);
-    return <App Survey = {survey} />;
+    return <App checkSurvey = {survey} />;
 }
 
 export default SurveyInput;
