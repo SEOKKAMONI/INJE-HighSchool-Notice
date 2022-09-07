@@ -1,9 +1,9 @@
 import { StyleSheet, View } from 'react-native';
+import { useState } from 'react';
+
 import Header from "./routes/Header";
 import Main from "./routes/Main";
 import ClassSurvey from './routes/ClassSurvey';
-import SurveyInput from './components/Survey/SurveyInput';
-import { useState } from 'react';
 
 export default function App( {Survey} ) {
 
