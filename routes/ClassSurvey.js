@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import SurveyForm from "../components/Survey/SurveyForm";
 import SurveyInput from "../components/Survey/SurveyInput";
+import { SurveyContext } from "../context/SurveyContext";
 
 function ClassSurvey() {
     const [grade, setGrade] = useState(1);
@@ -10,11 +11,11 @@ function ClassSurvey() {
 
     return (
         <View className="container" style={styles.container}>
-            <SurveyForm 
-                style={styles.SurveyForm} 
-                currentGrade={grade}
-                currentClass={Class}
-            />
+            <SurveyContext.Provider value={{grade,setGrade, Class,setClass}}>
+                <SurveyForm 
+                    style={styles.SurveyForm} 
+                />
+            </SurveyContext.Provider>
         </View>
     )
 }
