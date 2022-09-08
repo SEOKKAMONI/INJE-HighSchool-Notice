@@ -10,6 +10,7 @@ function ClassSurvey() {
     return (
         <View className="container" style={styles.container}>
             <SurveyForm style={styles.SurveyForm} />
+            <DropdownBtn />
         </View>
     )
 }
