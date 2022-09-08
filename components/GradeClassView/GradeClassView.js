@@ -1,7 +1,7 @@
 import "./GradeClassView.css";
 import { DataContext } from "../../context/DataContext";
 import { SurveyContext } from "../../context/SurveyContext";
-import { useEffect, useState, useContext } from "react";
+import { useContext } from "react";
 
 function GradeClassView() {
     const { grade, Class } = useContext(DataContext);
