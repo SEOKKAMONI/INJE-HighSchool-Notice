@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 import "./ScheduleTable.css"
 
 function ScheduleTable() {
+    const { grade, Class } = useContext(DataContext);
     const [subjects, setSubjects] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -14,7 +15,7 @@ function ScheduleTable() {
     const getSchedule = async () => {
         const json = await (
             await fetch(
-                `https://open.neis.go.kr/hub/hisTimetable?KEY=af1ccdd3826b47f89c4acbfc8b3ed12a&Type=json&pIndex=1&pSize=35&ATPT_OFCDC_SC_CODE=E10&SD_SCHUL_CODE=7310084&GRADE=1&CLASS_NM=7&AY=2022&SEM=1&TI_FROM_YMD=20220314&TI_TO_YMD=20220319`
+                `https://open.neis.go.kr/hub/hisTimetable?KEY=af1ccdd3826b47f89c4acbfc8b3ed12a&Type=json&pIndex=1&pSize=35&ATPT_OFCDC_SC_CODE=E10&SD_SCHUL_CODE=7310084&GRADE=${grade}&CLASS_NM=${Class}&AY=2022&SEM=1&TI_FROM_YMD=20220314&TI_TO_YMD=20220319`
             )
         ).json();
         setSubjects(json.hisTimetable[1].row);
