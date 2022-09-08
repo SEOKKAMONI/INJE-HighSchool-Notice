@@ -1,9 +1,9 @@
-import "./DropdownBtn.css";
+import "./GradeClassView.css";
 import { DataContext } from "../../context/DataContext";
 import { SurveyContext } from "../../context/SurveyContext";
 import { useEffect, useState, useContext } from "react";
 
-function DropdownBtn() {
+function GradeClassView() {
     const { grade, Class } = useContext(DataContext);
     const { survey } = useContext(SurveyContext);
 
@@ -11,7 +11,7 @@ function DropdownBtn() {
         <div>
             {
                 survey ? (
-                    <div className="DropDown">
+                    <div className="GradeClass">
                         {grade} 학년 {Class} 반
                     </div>
                 ) : (
@@ -23,4 +23,4 @@ function DropdownBtn() {
     )
 }
 
-export default DropdownBtn;
+export default GradeClassView;

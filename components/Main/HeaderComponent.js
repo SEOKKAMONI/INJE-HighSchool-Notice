@@ -1,5 +1,5 @@
 import "./Header.css";
-import DropdownBtn from "../DropDownBtn/DropdownBtn";
+import GradeClassView from "../GradeClassView/GradeClassView";
 
 function HeaderComponent() {
     return (
@@ -7,7 +7,7 @@ function HeaderComponent() {
             <div className="logo">
                 인제알리미
             </div>
-            <DropdownBtn />
+            <GradeClassView />
         </div>
     )
 }

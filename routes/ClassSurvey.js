@@ -3,14 +3,14 @@ import { useState } from "react";
 import { DataContext } from "../context/DataContext";
 
 import SurveyForm from "../components/Survey/SurveyForm";
-import DropdownBtn from "../components/DropDownBtn/DropdownBtn";
+import GradeClassView from "../components/GradeClassView/GradeClassView";
 
 function ClassSurvey() {
 
     return (
         <View className="container" style={styles.container}>
             <SurveyForm style={styles.SurveyForm} />
-            <DropdownBtn />
+            <GradeClassView />
         </View>
     )
 }
