@@ -3,16 +3,13 @@ import { useState } from "react";
 import { DataContext } from "../context/DataContext";
 
 import SurveyForm from "../components/Survey/SurveyForm";
+import DropdownBtn from "../components/DropDownBtn/DropdownBtn";
 
 function ClassSurvey() {
-    const [grade, setGrade] = useState(1);
-    const [Class, setClass] = useState(1);
 
     return (
         <View className="container" style={styles.container}>
-            <DataContext.Provider value={{grade,setGrade, Class,setClass}}>
-                <SurveyForm style={styles.SurveyForm} />
-            </DataContext.Provider>
+            <SurveyForm style={styles.SurveyForm} />
         </View>
     )
 }
