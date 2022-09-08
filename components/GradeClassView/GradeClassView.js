@@ -5,15 +5,19 @@ import { useContext } from "react";
 
 function GradeClassView() {
     const { grade, Class } = useContext(DataContext);
-    const { survey } = useContext(SurveyContext);
+    const { setSurvey, survey } = useContext(SurveyContext);
+
+    const SurveyOnclick = () => {
+        setSurvey(false)
+    }
 
     return (
         <div>
             {
                 survey ? (
-                    <div className="GradeClass">
+                    <button className="GradeClass" onClick={SurveyOnclick}>
                         {grade}학년 {Class}반
-                    </div>
+                    </button>
                 ) : (
                     <div></div>
                 )
