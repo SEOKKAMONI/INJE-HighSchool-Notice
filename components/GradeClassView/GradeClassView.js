@@ -12,11 +12,10 @@ function GradeClassView() {
             {
                 survey ? (
                     <div className="GradeClass">
-                        {grade} 학년 {Class} 반
+                        {grade}학년 {Class}반
                     </div>
                 ) : (
-                    <div>
-                    </div>
+                    <div></div>
                 )
             }
         </div>
