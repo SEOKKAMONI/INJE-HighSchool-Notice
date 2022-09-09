@@ -1,11 +1,19 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { theme } from "../../assets/Color"
+import { LunchNoticeContext } from '../../context/LunchNoticeContext';
 
 
 function Lunch() {
+    const { checkLunch, setCheckLunch } = useContext(LunchNoticeContext);
+
+    const EnterLunchTable = () => {
+        setCheckLunch(true);
+    }
+
+
     return (
         <View style={styles.content}>
-            <TouchableOpacity>
+            <TouchableOpacity onPressOut={EnterLunchTable}>
                 <View style={styles.LunchContent}>
                     <View style={styles.TextBox}>
                         <Text style={styles.cotentText}>
