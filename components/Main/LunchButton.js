@@ -1,37 +1,48 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { useContext } from "react";
 import { theme } from "../../assets/Color"
+import { LunchNoticeContext } from '../../context/LunchNoticeContext';
 
-function Notice() {
+
+function LunchButton() {
+    const { checkLunch, setCheckLunch } = useContext(LunchNoticeContext);
+
+    const EnterLunchTable = () => {
+        setCheckLunch(true);
+    }
+
+
     return (
         <View style={styles.content}>
-            <TouchableOpacity>
-                <View style={styles.noticeBoard}>
+            <TouchableOpacity onPressOut={EnterLunchTable}>
+                <View style={styles.LunchContent}>
                     <View style={styles.TextBox}>
                         <Text style={styles.cotentText}>
-                            익명 게시판
+                            급식표
                         </Text>
                         <Text style={styles.contentSubText}>
-                            익명으로 학생들과 소통할수 있습니다.
+                            급식표를 손쉽게 확인할 수 있습니다.
                         </Text>
                     </View>
                 </View>
             </TouchableOpacity>
         </View>
+
     )
 }
 
-export default Notice;
+export default LunchButton;
 
 const styles = StyleSheet.create({
     content: {
         marginBottom: 20
-    },
-    noticeBoard: {
+    },  
+    LunchContent: {
         width: "338px",
         height: "15vh",
         borderRadius: 15,
         padding: 16,
-        backgroundColor: theme.BoardBtnBg,
+        backgroundColor: theme.LunchBtnBg,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,

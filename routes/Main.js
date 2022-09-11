@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { theme } from "../assets/Color"
 
 import Schedule from "../components/Schedule/Schedule";
-import Lunch from "../components/Main/Lunch";
-import Notice from "../components/Main/Notice";
+import LunchButton from "../components/Main/LunchButton";
+import NoticeButton from "../components/Main/NoticeButton";
 
 import { LunchNoticeContext } from '../context/LunchNoticeContext';
 
@@ -16,8 +16,8 @@ function Main() {
             <View style={styles.contentBox}>
                 <LunchNoticeContext.Provider value={{checkLunch, setCheckLunch}}>
                     <Schedule />
-                    <Lunch />
-                    <Notice />
+                    <LunchButton />
+                    <NoticeButton />
                 </LunchNoticeContext.Provider>
             </View>
         </View>
