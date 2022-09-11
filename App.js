@@ -1,8 +1,7 @@
 import { StyleSheet, View } from 'react-native';
 import { useState } from 'react';
 
-import Header from "./routes/Header";
-import Main from "./routes/Main";
+import MainPage from './pages/MainPage';
 import ClassSurvey from './routes/ClassSurvey';
 
 import { DataContext } from './context/DataContext';
@@ -33,8 +32,7 @@ export default function App() {
         <LunchNoticeContext.Provider value={{ checkLunch, setCheckLunch }}>
           <DataContext.Provider value={{ grade, setGrade, Class, setClass }}>
             <SurveyContext.Provider value={{ survey, setSurvey }}>
-              <Header />
-              <Main />
+              <MainPage />
             </SurveyContext.Provider>
           </DataContext.Provider>
         </LunchNoticeContext.Provider>

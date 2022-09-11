@@ -7,7 +7,8 @@ import { LunchNoticeContext } from '../context/LunchNoticeContext';
 import Schedule from "../components/Schedule/Schedule";
 import LunchButton from "../components/Main/LunchButton";
 import NoticeButton from "../components/Main/NoticeButton";
-import LunchPage from '../components/LunchPage/LunchPage';
+import LunchPage from '../pages/LunchPage';
+import Header from './Header';
 
 function Main() {
     const { checkLunch } = useContext(LunchNoticeContext);
