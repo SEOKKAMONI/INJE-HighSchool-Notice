@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import HeaderComponent from "../components/Main/Header/HeaderComponent";
+import HeaderComponent from "../components/Header/HeaderComponent";
 
 
 function Header() {

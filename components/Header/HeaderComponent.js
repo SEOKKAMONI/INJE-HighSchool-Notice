@@ -1,5 +1,5 @@
-import "./Header.css";
-import GradeClassView from "../../GradeClassView/GradeClassView";
+import "./Header.css"
+import GradeClassView from "../GradeClassView/GradeClassView";
 
 function HeaderComponent() {
     return (
