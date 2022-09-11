@@ -11,8 +11,7 @@
     margin: 0 auto;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 24px;
+.back-btn {
     cursor: pointer;
+    text-decoration: none;
 }
