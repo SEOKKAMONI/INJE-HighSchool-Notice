@@ -1,14 +1,26 @@
 import { StyleSheet, Text, View } from 'react-native';
-import HeaderComponent from "../components/Header/HeaderComponent";
+import { useContext } from 'react';
+import { LunchNoticeContext } from '../context/LunchNoticeContext';
 
+import HeaderComponent from "../components/Header/HeaderComponent";
+import LunchHeader from "../components/LunchHeader/LunchHeader";
 
 function Header() {
-    return (
-        <View style={styles.header}>
-            <HeaderComponent />
-        </View>
-
-    )
+    const { checkLunch } = useContext(LunchNoticeContext);
+    if(checkLunch) {
+        return (
+            <View style={styles.header}>
+                <LunchHeader />
+            </View>
+        )
+    }
+    else {
+        return (
+            <View style={styles.header}>
+                <HeaderComponent />
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
