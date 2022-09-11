@@ -1,27 +1,37 @@
 import { StyleSheet, View } from 'react-native';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { theme } from "../assets/Color"
+
+import { LunchNoticeContext } from '../context/LunchNoticeContext';
 
 import Schedule from "../components/Schedule/Schedule";
 import LunchButton from "../components/Main/LunchButton";
 import NoticeButton from "../components/Main/NoticeButton";
-
-import { LunchNoticeContext } from '../context/LunchNoticeContext';
+import LunchPage from '../components/LunchPage/LunchPage';
 
 function Main() {
-    const [checkLunch, setCheckLunch] = useState(false);
+    const { checkLunch } = useContext(LunchNoticeContext);
 
-    return (
-        <View style={styles.main}>
-            <View style={styles.contentBox}>
-                <LunchNoticeContext.Provider value={{checkLunch, setCheckLunch}}>
+    if (!checkLunch) {
+        return (
+            <View style={styles.main}>
+                <View style={styles.contentBox}>
                     <Schedule />
                     <LunchButton />
                     <NoticeButton />
-                </LunchNoticeContext.Provider>
+                </View>
             </View>
-        </View>
-    )
+        )
+    }
+    else if (checkLunch) {
+        return (
+            <View style={styles.main}>
+                <View style={styles.contentBox}>
+                    <LunchPage />
+                </View>
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
