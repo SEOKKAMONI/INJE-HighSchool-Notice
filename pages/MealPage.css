@@ -1,9 +1,10 @@
-.lunch-content {
+.meal-content {
     width: 338px;
     height: 180px;
 }
 
-.lunch-content div {
+.meal-content > div {
+    box-shadow: rgb(0 0 0 / 25%) 0px 2px 3.84px;
     width: 100%;
     height: 100%;
     margin-bottom: 15px;
@@ -11,11 +12,16 @@
     padding: 4px;
 }
 
-.breakfast, .lunch, .dinner {
-    box-shadow: rgb(0 0 0 / 25%) 0px 2px 3.84px;
-}
-
-.lunch-content div .meal-title {
+.meal-content div > .meal-title {
     text-align: center;
     font-weight: bold;
+}
+
+.meal-list > ul {
+    text-align: center;
+    margin: 8px;
+}
+
+.meal-list > ul > li {
+    list-style: none;
 }
