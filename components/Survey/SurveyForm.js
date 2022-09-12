@@ -9,17 +9,14 @@ export default function SurveyForm() {
     const { setSurvey } = useContext(SurveyContext);
 
     useEffect(() => {
-        console.log(grade);
     }, [grade]);
 
     useEffect(() => {
-        console.log(Class);
     }, [Class]); 
 
     function onClick(e) {
         e.preventDefault();
         setSurvey(true)
-        console.log("Correct !!")
     }
 
     return (
