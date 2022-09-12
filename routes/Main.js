@@ -5,9 +5,9 @@ import { theme } from "../assets/Color"
 import { LunchNoticeContext } from '../context/LunchNoticeContext';
 
 import Schedule from "../components/Schedule/Schedule";
-import LunchButton from "../components/Main/LunchButton";
+import MealButton from "../components/Main/MealButton";
 import NoticeButton from "../components/Main/NoticeButton";
-import LunchPage from '../pages/LunchPage';
+import MealPage from '../pages/MealPage';
 import Header from './Header';
 
 function Main() {
@@ -18,7 +18,7 @@ function Main() {
             <View style={styles.main}>
                 <View style={styles.contentBox}>
                     <Schedule />
-                    <LunchButton />
+                    <MealButton />
                     <NoticeButton />
                 </View>
             </View>
@@ -28,7 +28,7 @@ function Main() {
         return (
             <View style={styles.main}>
                 <View style={styles.contentBox}>
-                    <LunchPage />
+                    <MealPage />
                 </View>
             </View>
         )
