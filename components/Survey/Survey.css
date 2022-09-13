@@ -28,7 +28,15 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.grade-input, .class-input {
+.grade-input {
+    font-size: 32px;
+    width: 222px;
+    border: none;
+    border-bottom: 3px solid #3a86ff;
+    outline: none;
+}
+
+.class-input {
     font-size: 32px;
     width: 222px;
     border: none;
@@ -36,7 +44,14 @@ input::-webkit-inner-spin-button {
     outline: none;
 }
 
-
+.class-input-focus {
+    font-size: 32px;
+    width: 222px;
+    border: none;
+    border-bottom: 3px solid #3a86ff;
+    outline: none;
+    margin-top: 70px;
+}
 
 .class-input {
     margin-top: 70px;
@@ -46,7 +61,21 @@ input::-webkit-inner-spin-button {
     position: relative;
     top: 70px;
     margin: 0 auto;
-    background-color: #3A86FF;
+    background-color: rgba(0, 0, 0, 20%);
+    border-radius: 13px;
+    width: 326px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+}
+
+.survey-btn-focus {
+    position: relative;
+    top: 70px;
+    margin: 0 auto;
+    background-color: #3a86ff;
     border-radius: 13px;
     width: 326px;
     height: 50px;
@@ -55,4 +84,4 @@ input::-webkit-inner-spin-button {
     border: none;
     color: #fff;
     cursor: pointer;
-}
+} 

@@ -5,16 +5,32 @@ import { DataContext } from "../../context/DataContext";
 import { SurveyContext } from '../../context/SurveyContext';
 
 export default function SurveyForm() {
+    const [foucus, setFocus] = useState(false);
+    const [btnFocus, setBtnFocus] = useState(false);
+
     const { grade, setGrade, Class, setClass } = useContext(DataContext);
     const { setSurvey } = useContext(SurveyContext);
 
     useEffect(() => {
-        console.log(grade);
+        if(grade > 0) {
+            setFocus(true);
+        }
     }, [grade]);
 
     useEffect(() => {
-        console.log(Class);
+        if(Class > 0) {
+            setBtnFocus(true);
+        } else {
+            setFocus(false);
+        }
     }, [Class]); 
+
+    useEffect(() => {
+        setFocus(false);
+        setBtnFocus(false);
+        setClass(0);
+        setGrade(0);
+    }, [setSurvey])
 
     function onClick(e) {
         e.preventDefault();
@@ -29,7 +45,6 @@ export default function SurveyForm() {
         }
         else {
             setSurvey(true);
-            console.log(Class)
         }
     }
 
@@ -42,9 +57,9 @@ export default function SurveyForm() {
                         <input type="number" className="grade-input" onChange={e => setGrade(e.target.value)} placeholder={"학년"} />
                     </div>
                     <div className="survey-class">
-                        <input type="number" className="class-input" onChange={e => setClass(e.target.value)} placeholder={"반"} />
+                        <input type="number" className= {foucus ? "class-input-focus" : "class-input"} onChange={e => setClass(e.target.value)} placeholder={"반"} />
                     </div>
-                    <button className="survey-btn" onClick={(e) => onClick(e)}>
+                    <button className={btnFocus ? "survey-btn-focus" : "survey-btn"} onClick={btnFocus ? (e) => onClick(e) : ""}>
                         설정 하기
                     </button>
                 </form>
