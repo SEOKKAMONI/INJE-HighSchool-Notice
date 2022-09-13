@@ -14,8 +14,8 @@ import { LunchNoticeContext } from './context/LunchNoticeContext';
 export default function App() {
   const [survey, setSurvey] = useState(false); // Survey Check
   const [checkLunch, setCheckLunch] = useState(false); // Lunch Page Check
-  const [grade, setGrade] = useState(1); // Grade Data
-  const [Class, setClass] = useState(1); // Class Data
+  const [grade, setGrade] = useState(0); // Grade Data
+  const [Class, setClass] = useState(0); // Class Data
 
   if (!survey) {
     return (
