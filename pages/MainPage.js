@@ -3,7 +3,7 @@ import Header from "../routes/Header";
 
 function MainPage() {
     return (
-        <div>
+        <div className="main-container">
             <Header />
             <Main />
         </div>

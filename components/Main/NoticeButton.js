@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
     noticeBoard: {
         width: "338px",
-        height: "15vh",
+        height: "113px",
         borderRadius: 15,
         padding: 16,
         backgroundColor: theme.BoardBtnBg,
