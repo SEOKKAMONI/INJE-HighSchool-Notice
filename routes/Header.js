@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import "./Header.css"
 import { useContext } from 'react';
 import { LunchNoticeContext } from '../context/LunchNoticeContext';
 
@@ -9,28 +9,18 @@ function Header() {
     const { checkLunch } = useContext(LunchNoticeContext);
     if(checkLunch) {
         return (
-            <View style={styles.header}>
+            <div className="main-header">
                 <LunchHeader />
-            </View>
+            </div>
         )
     }
     else {
         return (
-            <View style={styles.header}>
+            <div className="main-header">
                 <HeaderComponent />
-            </View>
+            </div>
         )
     }
 }
-
-const styles = StyleSheet.create({
-    header: {
-        flex: 0.5,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: 'space-between',
-        padding: 10,
-    },
-})
 
 export default Header

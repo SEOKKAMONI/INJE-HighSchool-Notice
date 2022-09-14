@@ -1,4 +1,3 @@
-import { StyleSheet, View } from 'react-native';
 import { useState, useContext } from 'react';
 import { theme } from "../assets/Color"
 
@@ -10,43 +9,31 @@ import NoticeButton from "../components/Main/NoticeButton";
 import MealPage from '../pages/MealPage';
 import Header from './Header';
 
+import "./Main.css";
+
 function Main() {
     const { checkLunch } = useContext(LunchNoticeContext);
 
     if (!checkLunch) {
         return (
-            <View style={styles.main}>
-                <View style={styles.contentBox}>
+            <div className='main'>
+                <div className='content-box'>
                     <Schedule />
                     <MealButton />
                     <NoticeButton />
-                </View>
-            </View>
+                </div>
+            </div>
         )
     }
     else if (checkLunch) {
         return (
-            <View style={styles.main}>
-                <View style={styles.contentBox}>
+            <div className='main'>
+                <div className='content-box'>
                     <MealPage />
-                </View>
-            </View>
+                </div>
+            </div>
         )
     }
 }
-
-const styles = StyleSheet.create({
-    main: {
-        flex: 10,
-        backgroundColor: "#fff"
-    },
-    contentBox: {
-        position: "relative",
-        top: 30,
-        flex: 1,
-        alignItems: "center",
-
-    },
-})
 
 export default Main

@@ -1,6 +1,5 @@
 import "./App.css"
 
-import { StyleSheet, View } from 'react-native';
 import { useState } from 'react';
 
 import MainPage from './pages/MainPage';
@@ -19,18 +18,18 @@ export default function App() {
 
   if (!survey) {
     return (
-      <View style={styles.container}>
+      <div className="container">
         <DataContext.Provider value={{ grade, setGrade, Class, setClass }}>
           <SurveyContext.Provider value={{ survey, setSurvey }}>
             <ClassSurvey />
           </SurveyContext.Provider>
         </DataContext.Provider>
-      </View>
+      </div>
     )
   }
   else if (survey) {
     return (
-      <View style={styles.container}>
+      <div className="container">
         <LunchNoticeContext.Provider value={{ checkLunch, setCheckLunch }}>
           <DataContext.Provider value={{ grade, setGrade, Class, setClass }}>
             <SurveyContext.Provider value={{ survey, setSurvey }}>
@@ -38,14 +37,7 @@ export default function App() {
             </SurveyContext.Provider>
           </DataContext.Provider>
         </LunchNoticeContext.Provider>
-      </View>
+      </div>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    overflow: "hidden",
-  },
-});

@@ -18,10 +18,10 @@ function MainPage() {
 
     return (
         <div className='meal-content'>
+            <h3 className='meal-title'>
+                아침 식사
+            </h3>
             <div className='breakfast'>
-                <div className='meal-title'>
-                    아침 식사
-                </div>
                 <div className='meal-list'>
                     <ul className='breafast-list'>
                         <li>떡볶이</li>
@@ -31,27 +31,12 @@ function MainPage() {
                     </ul>
                 </div>
             </div>
-
-            <div className='lunch'>
-                <div className='meal-title'>
+            <h3 className='meal-title'>
                     점심 식사
-                </div>
+            </h3>
+            <div className='lunch'>
                 <div className='meal-list'>
                     <ul className='lunch-list'>
-                        <li>떡볶이</li>
-                        <li>떡볶이</li>
-                        <li>떡볶이</li>
-                        <li>떡볶이</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div className='dinner'>
-                <div className='meal-title'>
-                    저녁 식사
-                </div>
-                <div className='meal-list'>
-                    <ul className='dinner-list'>
                         <li>떡볶이</li>
                         <li>떡볶이</li>
                         <li>떡볶이</li>

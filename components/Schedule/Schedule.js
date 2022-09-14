@@ -7,7 +7,7 @@ import { theme } from "../../assets/Color"
 function Schedule() {
     return (
         <View style={styles.scheduleContent}>
-            <ScheduleTable/>
+            <ScheduleTable style={styles.scheduleTable}/>
         </View >
     )
 }
@@ -29,6 +29,9 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 5,
     },
+    scheduleTable: {
+        flex: 1
+    }
 });
 
 export default Schedule;

@@ -12,9 +12,9 @@
     padding: 4px;
 }
 
-.meal-content div > .meal-title {
+.meal-title {
     text-align: center;
-    font-weight: bold;
+    margin: 10px;
 }
 
 .meal-list > ul {

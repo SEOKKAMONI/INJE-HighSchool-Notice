@@ -1,0 +1,25 @@
+.meal-btn-content {
+    margin-bottom: 20px;
+}
+
+.meal-sction {
+    width: 338px;
+    height: 110px;
+    border-radius: 15px;
+    padding: 16px;
+    background-color: #fb5607;
+}
+
+.meal-text-box {
+    position: relative;
+    top: 20px;
+}
+
+.meal-text-content {
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+.meal-content-sub-text {
+    color: #fff;
+}

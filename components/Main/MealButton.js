@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useContext } from "react";
 import { theme } from "../../assets/Color"
 import { LunchNoticeContext } from '../../context/LunchNoticeContext';
+import "./MealButton.css";
 
 
 function LunchButton() {
@@ -13,55 +14,19 @@ function LunchButton() {
 
 
     return (
-        <View style={styles.content}>
-            <TouchableOpacity onPressOut={EnterLunchTable}>
-                <View style={styles.LunchContent}>
-                    <View style={styles.TextBox}>
-                        <Text style={styles.cotentText}>
-                            급식표
-                        </Text>
-                        <Text style={styles.contentSubText}>
-                            급식표를 손쉽게 확인할 수 있습니다.
-                        </Text>
-                    </View>
-                </View>
-            </TouchableOpacity>
-        </View>
-
+        <div className='meal-btn-content'>
+            <div className='meal-sction'>
+                <div className='meal-text-box'>
+                    <div className='meal-text-content'>
+                        급식표
+                    </div>
+                    <div className='meal-content-sub-text'>
+                        급식표를 손쉽게 확인할 수 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 
 export default LunchButton;
-
-const styles = StyleSheet.create({
-    content: {
-        marginBottom: 20
-    },  
-    LunchContent: {
-        width: "338px",
-        height: "113px",
-        borderRadius: 15,
-        padding: 16,
-        backgroundColor: theme.LunchBtnBg,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-    },
-    TextBox: {
-        position: "relative",
-        top: 20,
-    },
-    cotentText: {
-        fontSize: 23,
-        fontWeight: "bold",
-        color: "white"
-    },
-    contentSubText: {
-        color: "white"
-    },
-});

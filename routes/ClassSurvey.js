@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import "./ClassSurvey.css";
 import { useState } from "react";
 import { DataContext } from "../context/DataContext";
 
@@ -8,22 +8,12 @@ import GradeClassView from "../components/GradeClassView/GradeClassView";
 function ClassSurvey() {
 
     return (
-        <View className="container" style={styles.container}>
-            <SurveyForm style={styles.SurveyForm} />
+        <div className="container">
+            <SurveyForm />
             <GradeClassView />
-        </View>
+        </div>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    SurveyForm: {
-        flex: 1,
-        backgroundColor: "blue"
-    }
-})
 
 
 export default ClassSurvey;
