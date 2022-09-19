@@ -2,3 +2,17 @@
     border: 1px solid black;
     height: 100%;
 }
+
+.schedule-container__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 55px;
+    border: 1px solid black;
+}
+
+.schedule-container__header > span {
+    font-size: 28px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.2);
+}
