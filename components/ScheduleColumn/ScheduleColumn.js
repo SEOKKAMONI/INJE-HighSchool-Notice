@@ -1,8 +1,10 @@
+import "./ScheduleColumn.css"
+
 export default function ScheduleColumn() {
     return (
         <div>
             <div className="schedule__column">
-            <span>
+                <span>
                     국어
                 </span>
                 <span>
