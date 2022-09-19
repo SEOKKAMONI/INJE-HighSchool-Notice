@@ -5,8 +5,40 @@
     height: 90vh;
 }
 
+/* main-content */
+
 .main-content {
     border: 1px solid black;
-    width: 1000px;
-    height: 500px;
+    width: 60vw;
+    height: 550px;
 }
+
+/* main-content-header */
+
+.main-content-header{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    height: 70px;
+}
+
+.content-header__logo {
+    display: flex;
+    align-items: center    
+}
+
+.logo__title {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.logo__title > img {
+    height: 28px;
+}
+
+.title__text {
+    margin-right: 10px;
+}
+
