@@ -42,3 +42,9 @@
     margin-right: 10px;
 }
 
+/* content-frame */
+
+.main-content-frame {
+    height: 480px;
+    padding: 20px;
+}

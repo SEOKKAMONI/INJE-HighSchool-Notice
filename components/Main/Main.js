@@ -1,5 +1,6 @@
 import "./Main.css";
 import arrowSVG from "../../img/chevron.left.svg";
+import Schedule from "../Schedule/Schedule";
 
 export default function Main() {
     return (
@@ -17,6 +18,10 @@ export default function Main() {
                             <img src={arrowSVG} />
                         </span>
                     </div>
+                </div>
+                {/* content-frame */}
+                <div className="main-content-frame">
+                    <Schedule />
                 </div>
             </div>
         </div>
