@@ -11,10 +11,18 @@
     border: 1px solid black;
 }
 
-.schedule-container__header > span {
+/* 헤더 날짜 부분 */
+
+.header__day {
     font-size: 28px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.2);
+}
+
+.header__today {
+    font-size: 32px;
+    color: #3A86FF;
+    font-weight: 500;
 }
 
 .schedule-container__content {
@@ -24,6 +32,5 @@
 
 .schedule__frame {
     display: flex;
-    align-items: center;
     justify-content: space-around;
 }
