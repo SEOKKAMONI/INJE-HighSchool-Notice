@@ -6,3 +6,8 @@
     border: 1px solid black;
     height: 10vh;
 }
+
+.header__logo {
+    font-size: 26px;
+    font-weight: bold;
+}
