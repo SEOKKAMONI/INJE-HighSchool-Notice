@@ -1,7 +1,7 @@
 import "./Main.css";
 import arrowSVG from "../../img/chevron.left.svg";
 import Schedule from "../Schedule/Schedule";
-import GradeDropDownBtn from "../GradeDropDownBtn/GradeDropDownBtn";
+import DropDownBtns from "../DropDownBtns/DropDownBtns";
 
 export default function Main() {
     return (
@@ -19,7 +19,7 @@ export default function Main() {
                             <img src={arrowSVG} />
                         </span>
                     </div>
-                    <GradeDropDownBtn />
+                    <DropDownBtns />
                 </div>
                 {/* content-frame */}
                 <div className="main-content-frame">

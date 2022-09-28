@@ -1,8 +1,8 @@
 import {useState} from "react";
-import "./GradeDropDownBtn.css";
-import arrowSvg from "../../img/arrow.svg"
+import "./ClassDropDownBtn.css";
+import arrowSvg from "../../../img/arrow.svg";
 
-export default function DropDownBtn() {
+export default function ClassDownBtn() {
     const [showDrop, setShowDrop] = useState(false);
     const ShowDropDownItems = () => {
         setShowDrop(!showDrop)
@@ -12,20 +12,23 @@ export default function DropDownBtn() {
             <button className="drop-down-btn"
                 onClick={() => ShowDropDownItems()}
             >
-                <span className="grade-item">1학년</span>
+                <span className="class-item">1반</span>
                 <img src={arrowSvg} className="arrowSvg" />
             </button>
             <ul
                 className={showDrop ? "drop-down-items" : "drop-down-items drop-down-hidden"}
             >
                 <li className="drop-down-item">
-                    <span>1학년</span>
+                    <span>1반</span>
                 </li>
                 <li className="drop-down-item">
-                    <span>2학년</span>
+                    <span>2반</span>
                 </li>
                 <li className="drop-down-item">
-                    <span>3학년</span>
+                    <span>3반</span>
+                </li>
+                <li className="drop-down-item">
+                    <span>4반</span>
                 </li>
             </ul>
         </div>
