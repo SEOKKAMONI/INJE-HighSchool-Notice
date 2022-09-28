@@ -1,8 +1,11 @@
-import {useState} from "react";
+import { useState, useContext } from "react";
 import "./GradeDropDownBtn.css";
 import arrowSvg from "../../../img/arrow.svg"
+import { GradeClassContext } from "../../../context/GradeClassData";
 
 export default function DropDownBtn() {
+    const { Grade, setGrade } = useContext(GradeClassContext);
+
     return (
         <div className="drop-down-menu">
             <button className="drop-down-btn">
