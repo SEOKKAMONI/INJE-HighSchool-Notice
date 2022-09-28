@@ -10,6 +10,7 @@
     font-weight: 500;
     border-radius: 18px;
     padding: 8px;
+    cursor: pointer;
 }
 
 .grade-item {
@@ -28,7 +29,6 @@
 }
 
 .drop-down-item {
-    display: none;
     text-align: center;
     list-style: none;
     font-size: 20px;
@@ -36,6 +36,10 @@
     padding: 4px;
     width: 100%;
     border-radius: 18px;
+}
+
+.drop-down-hidden {
+    display: none;
 }
 
 .drop-down-item:hover {
