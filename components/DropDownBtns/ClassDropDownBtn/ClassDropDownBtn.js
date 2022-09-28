@@ -3,21 +3,13 @@ import "./ClassDropDownBtn.css";
 import arrowSvg from "../../../img/arrow.svg";
 
 export default function ClassDownBtn() {
-    const [showDrop, setShowDrop] = useState(false);
-    const ShowDropDownItems = () => {
-        setShowDrop(!showDrop)
-    }
     return (
         <div className="drop-down-menu">
-            <button className="drop-down-btn"
-                onClick={() => ShowDropDownItems()}
-            >
+            <button className="drop-down-btn">
                 <span className="class-item">1반</span>
                 <img src={arrowSvg} className="arrowSvg" />
             </button>
-            <ul
-                className={showDrop ? "drop-down-items" : "drop-down-items drop-down-hidden"}
-            >
+            <ul className="drop-down-items">
                 <li className="drop-down-item">
                     <span>1반</span>
                 </li>
