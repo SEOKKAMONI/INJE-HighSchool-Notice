@@ -17,6 +17,7 @@
 .main-content-header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     /* border: 1px solid black; */
     height: 70px;
     padding: 20px;
