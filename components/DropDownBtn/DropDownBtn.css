@@ -6,9 +6,9 @@
     border: none;
     outline: none;
     background-color: "#F8F8F8";
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    border-radius: 24px;
+    border-radius: 18px;
     padding: 8px;
 }
 
@@ -22,15 +22,22 @@
     list-style: none;
     position: absolute;
     z-index: 1;
-    border-radius: 24px;
+    border-radius: 18px;
     background-color: #EFEFEF;
     width: 95px;
 }
 
 .drop-down-item {
+    display: none;
     text-align: center;
     list-style: none;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    margin: 10px;
+    padding: 4px;
+    width: 100%;
+    border-radius: 18px;
+}
+
+.drop-down-item:hover {
+    background-color: #fff;
 }
