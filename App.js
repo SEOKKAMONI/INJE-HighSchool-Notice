@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import { GradeClassContext } from "./context/GradeClassData";
-import "./App.css";
+import "./App.css"
 import { useState } from "react";
 
 export default function App() {
