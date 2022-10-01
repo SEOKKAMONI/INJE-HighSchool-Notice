@@ -1,5 +1,6 @@
 import "./Schedule.css";
 import ScheduleColumn from "../ScheduleColumn/ScheduleColumn";
+import axios from 'axios';
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -11,7 +12,10 @@ export default function Schedule() {
         setToday(week[DAY]);
     }, [today])
 
-    return (
+    // API 
+
+
+      return (
         <div className="schedule-container">
             <div className="schedule-container__header">
                 <span className={today == "월요일" ? "header__today" : "header__day"}>월</span>
@@ -22,11 +26,11 @@ export default function Schedule() {
             </div>
             <div className="schedule-container__content">
                 <div className="schedule__frame">
-                    <ScheduleColumn />
-                    <ScheduleColumn />
-                    <ScheduleColumn />
-                    <ScheduleColumn />
-                    <ScheduleColumn />
+                    {
+                        schedules && schedules.map((schedule, index) => (
+                            <ScheduleColumn />
+                        ))
+                    }
                 </div>
             </div>
         </div>
