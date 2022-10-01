@@ -12,10 +12,7 @@ export default function Schedule() {
         setToday(week[DAY]);
     }, [today])
 
-    // API 
-
-
-      return (
+    return (
         <div className="schedule-container">
             <div className="schedule-container__header">
                 <span className={today == "월요일" ? "header__today" : "header__day"}>월</span>
@@ -26,11 +23,7 @@ export default function Schedule() {
             </div>
             <div className="schedule-container__content">
                 <div className="schedule__frame">
-                    {
-                        schedules && schedules.map((schedule, index) => (
-                            <ScheduleColumn />
-                        ))
-                    }
+                    <ScheduleColumn />
                 </div>
             </div>
         </div>
