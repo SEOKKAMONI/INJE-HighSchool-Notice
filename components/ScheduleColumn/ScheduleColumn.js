@@ -1,8 +1,10 @@
 import "./ScheduleColumn.css"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from 'axios';
+import { GradeClassContext } from "../../context/GradeClassData";
 
-export default function ScheduleColumn({ URL, GRADE_DATE, CLASS_NM_DATA, ALL_TI_YMD_DATA }) {
+export default function ScheduleColumn({ URL, ALL_TI_YMD_DATA }) {
+    const {Grade, Class} = useContext(GradeClassContext);
     const [schedules, setSchedule] = useState(null);
     let HTML_CODE = ""
     let ScheduleList = ""
@@ -13,12 +15,10 @@ export default function ScheduleColumn({ URL, GRADE_DATE, CLASS_NM_DATA, ALL_TI_
                 const response = await axios.get(
                     `${URL}`, {
                     params: {
-                        GRADE: GRADE_DATE,
-                        CLASS_NM: CLASS_NM_DATA,
-                        ALL_TI_YMD: ALL_TI_YMD_DATA
-                    }
-                }
-                );
+                        ALL_TI_YMD: ALL_TI_YMD_DATA,
+                        GRADE: Grade,
+                        CLASS_NM: Class
+                }});
                 setSchedule(response.data.misTimetable[1].row)
             } catch (error) {
                 console.log(error)
@@ -26,7 +26,11 @@ export default function ScheduleColumn({ URL, GRADE_DATE, CLASS_NM_DATA, ALL_TI_
         };
         ScheduleData();
         console.log(schedules)
-    }, []);
+    }, [Grade, Class]);
+
+    useEffect(() => {
+        console.log(Grade, Class)
+    }, [Grade])
 
     return (
         <div>
