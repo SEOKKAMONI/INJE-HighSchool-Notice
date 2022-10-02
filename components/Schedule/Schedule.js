@@ -25,26 +25,14 @@ export default function Schedule() {
             </div>
             <div className="schedule-container__content">
                 <div className="schedule__frame">
-                    <ScheduleColumn 
-                        URL={SCHEDULE_URL}
-                        ALL_TI_YMD_DATA={ALL_TI_YMD}
-                    />
-                    <ScheduleColumn 
-                        URL={SCHEDULE_URL}
-                        ALL_TI_YMD_DATA={ALL_TI_YMD+1}
-                    />
-                    <ScheduleColumn 
-                        URL={SCHEDULE_URL}
-                        ALL_TI_YMD_DATA={ALL_TI_YMD+2}
-                    />
-                    <ScheduleColumn 
-                        URL={SCHEDULE_URL}
-                        ALL_TI_YMD_DATA={ALL_TI_YMD+3}
-                    />
-                    <ScheduleColumn 
-                        URL={SCHEDULE_URL}
-                        ALL_TI_YMD_DATA={ALL_TI_YMD+4}
-                    />
+                    {
+                        [0,1,2,3,4].map(item => (
+                            <ScheduleColumn 
+                                URL={SCHEDULE_URL}
+                                ALL_TI_YMD_DATA={ALL_TI_YMD+item}
+                            />
+                        ))
+                    }
                 </div>
             </div>
         </div>

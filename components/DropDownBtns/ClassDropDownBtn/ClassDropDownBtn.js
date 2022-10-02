@@ -23,7 +23,6 @@ export default function ClassDownBtn() {
 
                 }});
                 setClassData(response.data.classInfo[1].row)
-                console.log(response.data.classInfo[1].row) // 몇반인지 길이
             } catch (error) {
                 console.log(error)
             }
