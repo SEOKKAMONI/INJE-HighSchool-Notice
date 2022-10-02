@@ -34,15 +34,20 @@ export default function ScheduleColumn({ URL, ALL_TI_YMD_DATA }) {
                     ScheduleList += `<span>기가</span>`
                 } else if (schedule.ITRT_CNTNT == "-(자)예술·체육활동") {
                     ScheduleList += `<span>예체능</span>`
-                } else if (schedule.ITRT_CNTNT == "-(창)동아리활동" || schedule.ITRT_CNTNT == "-(자)동아리활동" || schedule.ITRT_CNTNT == "-동아리활동") {
+                } else if (schedule.ITRT_CNTNT == "-(창)동아리활동" || schedule.ITRT_CNTNT == "-(자)동아리활동") {
                     ScheduleList += `<span>동아리</span>`
+                } else if(schedule.ITRT_CNTNT == "-동아리활동") {
+                    ScheduleList += `<span>스포츠</span>`
                 } else if (schedule.ITRT_CNTNT == "-진로와 직업") {
                     ScheduleList += `<span>진로</span>`
                 } else if (schedule.ITRT_CNTNT == "-(자)진로탐색활동") {
                     ScheduleList += `<span>진탐</span>`
                 } else if(schedule.ITRT_CNTNT == "-소프트웨어와 생활") {
                     ScheduleList += `<span>정보</span>`
-                } else {
+                } else if(schedule.ITRT_CNTNT == "-(창)자율활동") {
+                    ScheduleList += `<span>자율</span>`
+                } 
+                else {
                     ScheduleList += `<span>${schedule.ITRT_CNTNT.replace("-", "")}</span>`
                 }
                 if (index == 5) {

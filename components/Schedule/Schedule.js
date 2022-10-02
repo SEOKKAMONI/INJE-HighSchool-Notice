@@ -13,7 +13,7 @@ export default function Schedule() {
 
     // API
     const SCHEDULE_URL = `https://open.neis.go.kr/hub/misTimetable?KEY=af1ccdd3826b47f89c4acbfc8b3ed12a&pIndex=1&pSize=6&Type=json&ATPT_OFCDC_SC_CODE=E10&SD_SCHUL_CODE=7341079`;
-    const ALL_TI_YMD = 20221010
+    const ALL_TI_YMD = 20221003
     return (
         <div className="schedule-container">
             <div className="schedule-container__header">
