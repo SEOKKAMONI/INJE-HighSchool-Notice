@@ -1,3 +1,7 @@
+.drop-down-menu {
+    display: inline;
+}
+
 .drop-down-btn {
     width: 95px;
     display: flex;
@@ -51,4 +55,46 @@
 
 .drop-down-item:hover {
     background-color: #fff;
+}
+
+@media (max-width: 768px) {    
+    .drop-down-btn {
+        width: 90px;
+        font-size: 20px;
+        padding: 4px;
+    }
+    .drop-down-items {
+        width: 90px;
+    }
+    .drop-down-item {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .drop-down-btn {
+        width: 80px;
+        font-size: 18px;
+        padding: 6px;
+    }
+    .drop-down-items {
+        width: 80px;
+    }
+    .drop-down-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .drop-down-btn {
+        width: 70px;
+        font-size: 16px;
+        padding: 4px;
+    }
+    .drop-down-items {
+        width: 70px;
+    }
+    .drop-down-item {
+        font-size: 16px;
+    }
 }

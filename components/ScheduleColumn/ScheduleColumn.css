@@ -8,6 +8,19 @@
     font-weight: bold;
     margin-bottom: 35px;
     text-align: center;
-    width: 100px;
+    width: 80px;
     height: 35px;
+}
+
+@media (max-width: 768px) {    
+    .schedule__column > span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule__column > span {
+        font-size: 18px;
+        width: 55px;
+    }
 }
