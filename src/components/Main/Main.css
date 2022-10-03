@@ -31,7 +31,6 @@
 .logo__title {
     display: flex;
     align-items: center;
-    font-size: 32px;
     font-weight: bold;
     padding-bottom: 10px;
 }
@@ -42,6 +41,7 @@
 
 .title__text {
     margin-right: 10px;
+    font-size: 32px;
 }
 
 /* content-frame */
@@ -60,7 +60,7 @@
         position: relative;
         top: 30px;
     }
-    .logo__title {
+    .title__text {
         font-size: 28px;
     }
 
@@ -70,13 +70,13 @@
 }
 
 @media (max-width: 480px) {
-    .logo__title {
+    .title__text {
         font-size: 24px;
     }
 }
 
-@media (max-width: 400px) {
-    .logo__title {
+@media (max-width: 300px) {
+    .title__text {
         font-size: 22px;
     }
 }
