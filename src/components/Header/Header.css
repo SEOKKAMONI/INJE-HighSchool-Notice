@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    height: 10vh;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.header__logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {    
+    .header {
+        height: 8vh;
+    }
+    .header__logo {
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        height: 7vh;
+    }
+    .header__logo {
+        font-size: 20px;
+    }
+}
