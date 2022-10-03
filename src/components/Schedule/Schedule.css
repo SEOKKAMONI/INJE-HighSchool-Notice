@@ -1,0 +1,65 @@
+.schedule-container {
+    border: 0.5px solid #f8f8f8;
+    height: 100%;
+    background-color: rgba(248, 248, 248, 1);
+    border-radius: 24px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule-container__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 55px;
+    /* border: 1px solid black; */
+}
+
+.schedule-container__header > span {
+    width: 80px;
+    text-align: center;
+}
+
+/* 헤더 날짜 부분 */
+
+.header__day {
+    font-size: 28px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.header__today {
+    font-size: 32px;
+    color: #3A86FF;
+    font-weight: 500;
+}
+
+.schedule-container__content {
+    position: relative;
+    top: 20px;
+}
+
+.schedule__frame {
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width: 768px) {
+    .schedule-container {
+        position: relative;
+        top: 30px;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__today {
+        font-size: 28px;
+    }
+    .header__day {
+        font-size: 24px;
+    }
+}
