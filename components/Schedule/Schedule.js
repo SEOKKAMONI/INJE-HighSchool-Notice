@@ -7,9 +7,11 @@ export default function Schedule() {
     // 날짜
     const [today, setToday] = useState(""); // 요일
     const [YMD, setYMD] = useState(null); // YMD 가 null 이면 로딩중
+    
     useEffect(() => {
         const getTime = () => {
             let mergeYMD = ""
+
             const time = new Date();
             const week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');
             let year = time.getFullYear();
@@ -17,17 +19,18 @@ export default function Schedule() {
             let day = time.getDay();
             let date = time.getDate();
             setToday(week[day]);
-    
+            
             // 0 -> 02 두자리로 만들기
             let dateValue = ("0" + date).slice(-2)
             let monthValue = ("0" + month).slice(-2)
-            
             mergeYMD = (year+monthValue+dateValue) * 1; // string 을 1을 곱해줌으로써 숫자로 변환
-            setYMD(mergeYMD)
+            if(week[day] != "토요일" && week[day] != "일요일")
+                setYMD(mergeYMD - (day - 1))
+            if(week[day] == "토요일")
+                setYMD(mergeYMD + 2)
         }
         setInterval(getTime, 1000);    
     }, [])
-
 
     // API
     const SCHEDULE_URL = `https://open.neis.go.kr/hub/misTimetable?KEY=af1ccdd3826b47f89c4acbfc8b3ed12a&pIndex=1&pSize=6&Type=json&ATPT_OFCDC_SC_CODE=E10&SD_SCHUL_CODE=7341079`;

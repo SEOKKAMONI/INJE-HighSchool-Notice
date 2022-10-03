@@ -46,7 +46,9 @@ export default function ScheduleColumn({ URL, ALL_TI_YMD_DATA }) {
                     ScheduleList += `<span>정보</span>`
                 } else if(schedule.ITRT_CNTNT == "-(창)자율활동") {
                     ScheduleList += `<span>자율</span>`
-                } 
+                } else if(schedule.ITRT_CNTNT == "-(자)주제선택활동") {
+                    ScheduleList += `<span>창체</span>`
+                }
                 else {
                     ScheduleList += `<span>${schedule.ITRT_CNTNT.replace("-", "")}</span>`
                 }
