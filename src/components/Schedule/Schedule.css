@@ -41,6 +41,7 @@
 .schedule-container__content {
     position: relative;
     top: 20px;
+    height: 65%;
 }
 
 .schedule__frame {
