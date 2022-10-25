@@ -1,6 +1,30 @@
 .meal-container {
+    display: flex;
+    justify-content: center;
     border: 0.5px solid #f8f8f8;
     height: 100%;
     background-color: rgba(248, 248, 248, 1);
     border-radius: 24px;
+}
+
+.breakfast {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+}
+
+.lunch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
 }

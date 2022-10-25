@@ -3,7 +3,12 @@ import "./MealPlanner.css"
 export default function MealPlanner() {
     return (
         <div className="meal-container">
-            MealPlanner
+            <div className="breakfast">
+                s
+            </div>
+            <div className="lunch">
+                s
+            </div>
         </div>
     )
 }

@@ -25,7 +25,9 @@ export default function Main() {
                             <img src={arrowSVG} />
                         </span>
                     </div>
-                    <DropDownBtns />
+                    {
+                        pageStatus ? <DropDownBtns /> : ""
+                    }
                 </div>
                 {/* content-frame */}
                 <div className="main-content-frame">
