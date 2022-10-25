@@ -38,7 +38,7 @@ export default function ScheduleColumn({ URL, ALL_TI_YMD_DATA }) {
                     ScheduleList += `<span>동아리</span>`
                 } else if(schedule.ITRT_CNTNT == "-동아리활동") {
                     ScheduleList += `<span>스포츠</span>`
-                } else if (schedule.ITRT_CNTNT == "-진로와 직업") {
+                } else if (schedule.ITRT_CNTNT == "-진로와 직업" || schedule.ITRT_CNTNT == "-진로활동") {
                     ScheduleList += `<span>진로</span>`
                 } else if (schedule.ITRT_CNTNT == "-(자)진로탐색활동") {
                     ScheduleList += `<span>진탐</span>`
