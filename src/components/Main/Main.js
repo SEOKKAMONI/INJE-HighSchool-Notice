@@ -2,7 +2,6 @@ import "./Main.css";
 import arrowSVG from "../../img/chevron.left.svg";
 import Schedule from "../Schedule/Schedule";
 import DropDownBtns from "../DropDownBtns/DropDownBtns";
-import MealPlanner from "../MealPlanner/MealPlanner";
 import { useState } from "react";
 
 export default function Main() {
@@ -18,22 +17,16 @@ export default function Main() {
                         {/* header 안 내용 */}
                         <span className="logo__title" onClick={() => setPageStatus(!pageStatus)}>
                             <span className="title__text">
-                                {
-                                    pageStatus ? <span>시간표</span> : <span>급식표</span>
-                                }
+                                <span>시간표</span>
                             </span>
                             <img src={arrowSVG} />
                         </span>
                     </div>
-                    {
-                        pageStatus ? <DropDownBtns /> : ""
-                    }
+                    <DropDownBtns />
                 </div>
                 {/* content-frame */}
                 <div className="main-content-frame">
-                    {
-                        pageStatus ? <Schedule/> : <MealPlanner/>
-                    }
+                    <Schedule />
                 </div>
             </div>
         </div>
