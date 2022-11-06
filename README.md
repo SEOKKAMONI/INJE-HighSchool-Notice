@@ -1,4 +1,4 @@
-<h1>저의 모교 상인천 중학교 시간표 알리미 입니다</h1>
+<h1>상인천 중학교 시간표 알리미 입니다</h1>
 <hr>
 <h1><a href="https://sang-incheon-reminder-jtm1uw428-seokkamoni.vercel.app/">홈페이지로 가기</a></h1>
 <h3>기능</h3>
